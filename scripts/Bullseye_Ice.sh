@@ -20,7 +20,7 @@ HOME="/home/${default_user}"
 mkdir ~/.config
 
 sudo chmod 777 ~/.config
-sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.config /home/$(logname)/
+sudo cp -p --recursive  /home/$(logname)/Bullseye_Ice/.config /home/$(logname)/
 
 mkdir ~/.config/tint2
 
@@ -35,20 +35,20 @@ sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
 sudo apt autoremove
 
-cp ~/Buster_Ice/dotfiles/compton.conf ~/.config/
+cp ~/Bullseye_Ice/dotfiles/compton.conf ~/.config/
 
-cp ~/Buster_Ice/dotfiles/.Xresources ~/
+cp ~/Bullseye_Ice/dotfiles/.Xresources ~/
 sudo chmod 777 ~/.Xresources
 
-cp ~/Buster_Ice/dotfiles/keyboard.sh ~/
+cp ~/Bullseye_Ice/dotfiles/keyboard.sh ~/
 
-sudo cp ~/Buster_Ice/dotfiles/rs.png /usr/share/fbxkb/images/rs.png
+sudo cp ~/Bullseye_Ice/dotfiles/rs.png /usr/share/fbxkb/images/rs.png
 
 mkdir ~/.config/mpv
 
-cp ~/Buster_Ice/dotfiles/mpv.conf ~/.config/mpv
+cp ~/Bullseye_Ice/dotfiles/mpv.conf ~/.config/mpv
 
-sudo cp ~/Buster_Ice/dotfiles/ncmpcpp_48x48.png /usr/share/icons
+sudo cp ~/Bullseye_Ice/dotfiles/ncmpcpp_48x48.png /usr/share/icons
 
 sudo chmod 777 /usr/share/icons/ncmpcpp_48x48.png
 
@@ -68,22 +68,22 @@ sudo sed -i 's/<allow_active>auth_admin/<allow_active>yes/' /usr/share/polkit-1/
 sudo chmod 777 ~/keyboard.sh
 
 ## debinfo -- prikaz resursa pri otvaranju terminala
-sudo cp ~/Buster_Ice/scripts/debinfo /usr/bin
+sudo cp ~/Bullseye_Ice/scripts/debinfo /usr/bin
 sudo chmod 777 /usr/bin/debinfo
 echo debinfo >> ~/.bashrc
 
 ## instalacija comptona
-cp ~/Buster_Ice/scripts/install_compton.sh ~/.scripts
+cp ~/Bullseye_Ice/scripts/install_compton.sh ~/.scripts
 mkdir ~/bin
-cp ~/Buster_Ice/dotfiles/start-compton.sh ~/bin
+cp ~/Bullseye_Ice/dotfiles/start-compton.sh ~/bin
 sudo chmod --recursive 777 ~/bin
 
 ## instalacija ncmpcpp
 sudo apt install -y mpd ncmpcpp
 mkdir ~/.mpd
 mkdir ~/.ncmpcpp
-cp ~/Buster_Ice/dotfiles/config ~/.ncmpcpp
-cp ~/Buster_Ice/dotfiles/mpd.conf ~/.mpd
+cp ~/Bullseye_Ice/dotfiles/config ~/.ncmpcpp
+cp ~/Bullseye_Ice/dotfiles/mpd.conf ~/.mpd
 touch ~/.mpd/mpd.db ~/.mpd/mpd.log ~/.mpd/mpd.pid
 sudo chmod --recursive 777 ~/.mpd
 sudo chmod --recursive 777 ~/.ncmpcpp
@@ -93,13 +93,13 @@ sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ncmpcpp.de
 echo "Icon=/usr/share/icons/ncmpcpp_48x48.png" >> /usr/share/applications/ncmpcpp.desktop
 
 ## screeny
-cp ~/Buster_Ice/scripts/screeny ~/.scripts
+cp ~/Bullseye_Ice/scripts/screeny ~/.scripts
 
 ## script for reinstall youtube-dl
-cp ~/Buster_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
+cp ~/Bullseye_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
 
 ## Geany theme settings
-cp ~/Buster_Ice/scripts/settings_geany ~/.scripts
+cp ~/Bullseye_Ice/scripts/settings_geany ~/.scripts
 cd ~/.scripts
 sudo ./settings_geany
 
@@ -122,7 +122,7 @@ sudo chmod --recursive 777 ~/.scripts
 cd && wget -O wps-office.deb https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9719/wps-office_11.1.0.9719.XA_amd64.deb
 sudo dpkg -i wps-office.deb
 sudo apt-get -f install && rm wps-office.deb
-cp ~/Buster_Ice/scripts/install_missing_wps_fonts.sh ~/.scripts
+cp ~/Bullseye_Ice/scripts/install_missing_wps_fonts.sh ~/.scripts
 cd ~/.scripts
 sudo ./install_missing_wps_fonts.sh
 
@@ -149,8 +149,8 @@ git clone https://gitlab.com/dwt1/dt-dark-theme.git
 # sudo ./install.sh
 
 # Copy wallpapers folderes
-sudo cp -r ~/Buster_Ice/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
-sudo cp -r ~/Buster_Ice/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
+sudo cp -r ~/Bullseye_Ice/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
+sudo cp -r ~/Bullseye_Ice/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
 
 # sudo sed -i 's!wallpapers-pack1!wallpapers-pixabay!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
 # sudo sed -i 's!bl-colorful-aptenodytes-forsteri-by-nixiepro.png!kuala-lumpur-1820944_1920.jpg!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
@@ -160,7 +160,7 @@ sudo cp -r ~/Buster_Ice/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
 # cd ~/projects/debian-openbox/15_openbox_wallpaper-packs
 # sudo ./install.sh
 
-sudo cp ~/Buster_Ice/WALLPAPERS/Wallpapers_Debian/lightdm_login.jpg /usr/share/images/desktop-base
+sudo cp ~/Bullseye_Ice/WALLPAPERS/Wallpapers_Debian/lightdm_login.jpg /usr/share/images/desktop-base
 sudo chmod 777 /usr/share/images/desktop-base/lightdm_login.jpg
 sudo sed -i 's!#background=!background=/usr/share/images/desktop-base/lightdm_login.jpg!' /etc/lightdm/lightdm-gtk-greeter.conf
 
@@ -187,19 +187,19 @@ echo "Exec=su-to-root -X -c /usr/sbin/gparted" > /tmp/gparted_replacement
 sudo sed -i "s/^.*Exec=/usr/sbin/gparted.*$/$(cat /tmp/gparted_replacement)/" /usr/share/applications/gparted.desktop
 
 mkdir -p ~/.urxvt/ext
-cp -p ~/Buster_Ice/ext/* ~/.urxvt/ext/
+cp -p ~/Bullseye_Ice/ext/* ~/.urxvt/ext/
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/urxvtc 50
 sudo update-alternatives --set x-terminal-emulator /usr/bin/urxvtc
 
-sudo cp -p --recursive /home/$(logname)/Buster_Ice/scripts/wingrid* /usr/local/bin/
+sudo cp -p --recursive /home/$(logname)/Bullseye_Ice/scripts/wingrid* /usr/local/bin/
 mkdir ~/.config/wingrid
-cp -p ~/Buster_Ice/dotfiles/wingrid.conf ~/.config/wingrid/
+cp -p ~/Bullseye_Ice/dotfiles/wingrid.conf ~/.config/wingrid/
 
-sudo cp -p ~/Buster_Ice/scripts/logout_dmenu.sh /usr/local/bin/
+sudo cp -p ~/Bullseye_Ice/scripts/logout_dmenu.sh /usr/local/bin/
 
 sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 
-sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.icewm /home/$(logname)/
+sudo cp -p --recursive  /home/$(logname)/Bullseye_Ice/.icewm /home/$(logname)/
 
 
 sudo chmod --recursive 777 ~/.config/nitrogen
