@@ -1,4 +1,4 @@
-## **Buster Ice** (instructions in Serbian)
+## **Bullseye Ice** (instructions in Serbian)
 ### *Debian Bullseye sa IceWM*
 
 1. Potrebno je prvo skinuti sa Debianovog sajta ISO instalacioni fajl:
