@@ -192,7 +192,7 @@ sudo sed -i "s/^.*Exec=/usr/sbin/gparted.*$/$(cat /tmp/gparted_replacement)/" /u
 mkdir -p ~/.urxvt/ext
 cp -p ~/Bullseye_Ice/ext/* ~/.urxvt/ext/
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/urxvtc 50
-sudo update-alternatives --set x-terminal-emulator /usr/bin/urxvtc
+sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
 sudo cp -p --recursive /home/$(logname)/Bullseye_Ice/scripts/wingrid* /usr/local/bin/
 mkdir ~/.config/wingrid
