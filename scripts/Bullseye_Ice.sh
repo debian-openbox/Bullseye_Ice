@@ -27,6 +27,9 @@ mkdir ~/.config/tint2
 mkdir ~/.scripts
 
 #sudo apt-get install -y software-properties-common && sudo apt-add-repository contrib && sudo apt-add-repository non-free 
+cd ~/Bullseye_Ice/scripts
+sudo ./non-free.sh
+
 sudo apt-get update
 
 sudo apt install -y xorg lightdm lxappearance bleachbit mpd ncmpcpp geany synaptic doublecmd-common terminator rxvt-unicode ranger micro firmware-linux firmware-linux-nonfree firmware-misc-nonfree ttf-mscorefonts-installer mousepad apt-rdepends compton compton-conf firefox-esr xsel mirage pulseaudio numlockx pavucontrol mlocate vlc arandr apt-file xutils mesa-utils xarchiver htop sysstat acpi hardinfo hddtemp network-manager network-manager-gnome net-tools nmap dnsutils libglu1-mesa xfburn gnome-disk-utility python3-pip  fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd git wmctrl pm-utils arc-theme numix-icon-theme nitrogen policykit-1-gnome udiskie psmisc flameshot
