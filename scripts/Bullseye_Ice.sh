@@ -102,9 +102,9 @@ cp ~/Bullseye_Ice/scripts/screeny ~/.scripts
 cp ~/Bullseye_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
 
 ## Geany theme settings
-cp ~/Bullseye_Ice/scripts/settings_geany ~/.scripts
-cd ~/.scripts
-sudo ./settings_geany
+#cp ~/Bullseye_Ice/scripts/settings_geany ~/.scripts
+#cd ~/.scripts
+#sudo ./settings_geany
 
 mkdir ~/projects
 cd ~/projects
