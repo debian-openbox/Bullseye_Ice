@@ -5,10 +5,10 @@ sudo apt update && sudo apt -y upgrade
 wget https://ice-wm.org/scripts/os-depends.sh
 sudo bash -x ./os-depends.sh
 
-wget https://github.com/ice-wm/icewm/releases/download/2.6.0/icewm-2.6.0.tar.lz
+wget https://github.com/ice-wm/icewm/releases/download/2.7.0/icewm-2.7.0.tar.lz
 sudo apt install lzip -yy
-tar -x --lzip -vpf icewm-2.6.0.tar.lz
-cd icewm-2.6.0
+tar -x --lzip -vpf icewm-2.7.0.tar.lz
+cd icewm-2.7.0
 ./configure --prefix=/usr
 make
 sudo make install
