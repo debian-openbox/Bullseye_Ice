@@ -26,7 +26,7 @@ mkdir ~/.config/tint2
 
 mkdir ~/.scripts
 
-#sudo apt-get install -y software-properties-common && sudo apt-add-repository contrib && sudo apt-add-repository non-free 
+sudo apt-get install -y software-properties-common && sudo apt-add-repository contrib && sudo apt-add-repository non-free 
 cd ~/Bullseye_Ice/scripts
 sudo ./non-free.sh
 
