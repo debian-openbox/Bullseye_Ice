@@ -202,10 +202,14 @@ sudo cp -p ~/Bullseye_Ice/scripts/logout_dmenu.sh /usr/local/bin/
 
 sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 
+
+cd ~/Sparky_E/scripts/openbox_conky
+sudo ./install.sh
+
 sudo cp -p --recursive  /home/$(logname)/Bullseye_Ice/.icewm /home/$(logname)/
 
 
-sudo chmod --recursive 777 ~/.config/nitrogen
+sudo chmod --recursive 755 ~/.config/nitrogen
 
 sudo chown -R $(logname):$(logname) /home/$(logname)/
 find /home/$(logname) -name '.*' | xargs sudo chown $(logname):$(logname)
